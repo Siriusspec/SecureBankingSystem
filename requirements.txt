@@ -1,4 +1,4 @@
-streamlit==1.28.1
-cryptography==41.0.7
-pycryptodome==3.19.0
-pandas==2.1.1
+streamlit
+cryptography
+pycryptodome
+pandas

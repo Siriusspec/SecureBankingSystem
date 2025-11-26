@@ -15,6 +15,18 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
     <style>
+    /* App background: smooth diagonal gradient */
+    html, body, [data-testid="stAppViewContainer"] {
+        background: linear-gradient(135deg, #f7f9fc 0%, #eef5ff 50%, #f6fff4 100%) !important;
+    }
+
+    /* Sidebar: frosted look */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 100%) !important;
+        backdrop-filter: blur(8px);
+        border-right: 1px solid rgba(255,255,255,0.35);
+    }
+
     .main { padding: 2rem; }
 
     /* Gradient header */
@@ -33,20 +45,36 @@ st.markdown("""
         margin-bottom: 2rem;
     }
 
-    /* Card-style boxes */
+    /* Card-style boxes with glassmorphism */
     .card {
-        background: #ffffff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.7) !important;
+        box-shadow: 0 10px 24px rgba(31, 119, 180, 0.08) !important;
         padding: 1.25rem;
         border-radius: 12px;
         margin: 0.5rem 0 1rem 0;
         transition: transform 0.2s ease;
         text-align: center;
         font-weight: 600;
-        border: 1px solid #f2f2f2;
+        border: 1px solid rgba(255,255,255,0.35) !important;
     }
     .card b { display:block; color:#222; margin-bottom: 0.35rem; }
     .card:hover { transform: scale(1.02); }
+
+    /* Tabs: subtle frosted container */
+    .stTabs [data-baseweb="tab-list"] {
+        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.35);
+        padding: 4px 6px;
+        margin-bottom: 1rem;
+    }
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin: 0 4px;
+    }
 
     /* Buttons */
     div.stButton > button {
@@ -57,11 +85,12 @@ st.markdown("""
         transition: 0.2s ease-in-out;
         border: none;
         padding: 0.6rem 0.85rem;
+        box-shadow: 0 8px 20px rgba(31, 119, 180, 0.25);
     }
     div.stButton > button:hover {
         background: linear-gradient(90deg, #28a745, #1f77b4);
         transform: translateY(-1px);
-        box-shadow: 0 6px 18px rgba(31, 119, 180, 0.25);
+        box-shadow: 0 12px 28px rgba(31, 119, 180, 0.3);
     }
 
     /* Animated alerts */
@@ -131,6 +160,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Initialize session state
 if 'logged_in' not in st.session_state:

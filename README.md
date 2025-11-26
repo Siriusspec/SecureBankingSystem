@@ -1,11 +1,25 @@
-Secure Banking System
-A comprehensive banking application with end-to-end encryption using DES and RSA cryptography.
-Features
+# Secure Banking System
 
-User authentication with SHA-256 password hashing
-Deposit, Withdraw, and Transfer operations
-DES encryption for transaction data
-RSA key exchange for secure key distribution
-Transaction history tracking
-Secure session management
-Transaction integrity verification
+A comprehensive banking application with end-to-end encryption using **DES** and **RSA** cryptography.
+
+---
+
+## Features
+
+- **User Authentication** with SHA-256 password hashing  
+- **Banking Operations**: Deposit, Withdraw, and Transfer  
+- **DES Encryption** for transaction data  
+- **RSA Key Exchange** for secure key distribution  
+- **Transaction History Tracking**  
+- **Secure Session Management**  
+- **Transaction Integrity Verification**
+
+---
+
+## Tech Stack
+
+- **Language:** Python  
+- **Database:** SQLite3  
+- **GUI:** Tkinter  
+- **Networking:** Socket Programming  
+- **Cryptography:** DES + RSA Hybrid
